@@ -7,3 +7,8 @@
     height: 100%;
     object-fit: cover;
 }
+.app__video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
