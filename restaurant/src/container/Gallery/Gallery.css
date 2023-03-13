@@ -80,3 +80,6 @@
     background: var(--color-black);
     border-radius: 5px;
 }
+.gallery__arrow-icon:hover {
+    color: var(--color-white);
+}
