@@ -41,3 +41,11 @@
     height: 447px;
     margin-right: 2rem;
 }
+.gallery__image-icon {
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0;
+    transition: .5s ease;
+    cursor: pointer;
+}
