@@ -10,3 +10,8 @@
     justify-content: flex-start;
     align-items: flex-end;
 }
+.app__chef-content_quote img {
+    width: 47px;
+    height: 40px;
+    margin: 0 1rem 1rem 0;
+}
