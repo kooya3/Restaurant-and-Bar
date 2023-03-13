@@ -63,3 +63,13 @@
 .app__gallery-images_card:hover .gallery__image-icon {
     opacity: 1;
 }
+.app__gallery-images_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 5%;
+}
