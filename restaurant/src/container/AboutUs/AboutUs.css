@@ -1,0 +1,163 @@
+.app__aboutus {
+    position: relative;
+}
+
+.app__aboutus-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.app__aboutus-overlay img {
+    width: 431px;
+    height: 415px;
+    z-index: 3;
+    align-self: center;
+    padding-right: 2%;
+    position: sticky;
+}
+
+.app__aboutus-content {
+    width: 100%;
+    z-index: 2;
+}
+
+.app__aboutus-content_about {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.app__aboutus-content_knife {
+    margin: 2rem 4rem;
+}
+
+.app__aboutus-content_knife img {
+    height: 610px;
+}
+
+.app__aboutus-content_history {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.app__aboutus-content_about p,
+.app__aboutus-content_history p {
+    margin: 2rem 0;
+    color: var(--color-grey);
+}
+
+@media screen and (min-width: 2000px) {
+    .app__aboutus-content_knife img {
+        height: 1110px;
+    }
+
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .app__aboutus-content {
+        flex-direction: column;
+    }
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .app__aboutus-content {
+        flex-direction: column;
+    }
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 440px;
+        padding-right: 5%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 400px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 420px;
+        padding-bottom: 40%;
+        margin-bottom: 50%;
+        align-self: center;
+
+    }
+}
+@media screen and (max-width: 200px) {
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;
+        width: 60%;
+        height: 320px;
+        margin-top: 7%;
+        padding: 2%;
+    }
+}
+@media screen and ( max-width: 400px) {
+    .app__aboutus-overlay img {
+        width: 83%;
+        height: 420px;
+        align-self: center;
+        margin-top: 50%;
+    }
+    
+    
+}
+@media screen and (max-width: 300px) {
+    .app__aboutus-overlay img {
+        width: 83%;
+        height: 420px;
+        align-self: center;
+        margin-top: 50%;
+    
+    }
+    
+    
+}
+
+@media screen and (max-width: 250px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 320px;
+        padding: auto;
+        align-self: center;
+    
+    }
+    
+    
+}
+@media screen and (max-width: 500px) {
+    .app__aboutus-overlay img {
+        width: 87%;
+        height: 430px;
+        margin-left: 1%;
+        align-self: center;
+    
+    }
+    
+    
+}
