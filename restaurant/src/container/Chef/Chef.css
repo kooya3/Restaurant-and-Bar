@@ -5,3 +5,8 @@
 
     margin-top: 5rem;
 }
+.app__chef-content_quote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
