@@ -56,3 +56,7 @@
     opacity: 1;
     transition: .5s ease;
 }
+
+.app__gallery-images_card:hover img {
+    opacity: .35;
+}
