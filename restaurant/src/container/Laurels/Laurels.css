@@ -15,3 +15,8 @@
 
     margin: 1rem;
 }
+@media screen and (min-width: 1900px) {
+    .app__laurels_awards-card {
+        min-width: 390px;
+    }
+}
