@@ -4,10 +4,9 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
 import './Gallery.css';
-const Gallery = () => (
-  <div>
-    Gallery
-  </div>
-);
 
-export default Gallery;
+const Gallery = () => {
+  const scrollRef = React.useRef(null);
+
+  const scroll = (direction) => {
+    const { current } = scrollRef;
