@@ -83,3 +83,18 @@
 .gallery__arrow-icon:hover {
     color: var(--color-white);
 }
+@media screen and (min-width: 2000px) {
+    .app__gallery-content button {
+        margin-top: 2rem;
+    }
+
+    .app__gallery-content {
+        min-width: 1000px;
+        padding-right: 4rem;
+    }
+
+    .app__gallery-images_card {
+        min-width: 400px;
+        height: 547px;
+    }
+}
