@@ -73,3 +73,10 @@
     position: absolute;
     bottom: 5%;
 }
+.gallery__arrow-icon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--color-black);
+    border-radius: 5px;
+}
