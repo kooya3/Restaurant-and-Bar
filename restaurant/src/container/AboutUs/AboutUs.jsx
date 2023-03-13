@@ -13,9 +13,7 @@ const AboutUs = () => (
       <div className="app__aboutus-content_about">
         <h1 className="headtext__cormorant">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
-        <p className="p__opensans">Welcome to AM PM, a vibrant restaurant and bar located in the heart of Northern Bypass, Thome. Our establishment was founded in 2021 with the goal of providing our customers with a unique dining and nightlife experience.
-
-At AM | PM, we offer an array of delectable dishes, handcrafted cocktails, and live entertainment that will keep you coming back for more..</p>
+        <p className="p__opensans">Welcome To AM PM, A Vibrant Restaurant And Bar. Our Establishment Was Opened In 2021 With The Goal Of Providing Our Customers With A Unique Dining And Nightlife Experience. At AM | PM, We Offer An Array Of Delectable Dishes, Handcrafted Cocktails, And Live Entertainment That Will Keep You Coming Back For More..</p>
         <button type="button" className="custom__button">Know More</button>
       </div>
 
@@ -26,7 +24,7 @@ At AM | PM, we offer an array of delectable dishes, handcrafted cocktails, and l
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">Our History</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
-        <p className="p__opensans">AM | PM is a restaurant and bar in Northern Bypass, Thome, after Windsor that was founded in 2021 by two ambitious men. The establishment offers delicious food, refreshing drinks, and a lively atmosphere, making it a hit with locals and visitors alike. Known for its focus on quality ingredients and expert preparation, AM PM has become a fixture in the community, offering a unique dining and drinking experience. On Fridays and Saturdays, the establishment offers wild offers that draw in crowds looking for a night of fun and excitement.</p>
+        <p className="p__opensans">AM | PM is a restaurant and bar in Northern Bypass, Thome, after Windsor that was founded in 2020 by two ambitious men. The establishment offers delicious food, refreshing drinks, and a lively atmosphere, making it a hit with locals and visitors alike. Known for its focus on quality ingredients and expert preparation, AM | PM has become a fixture in the community, offering a unique dining and drinking experience. On Fridays and Saturdays, the establishment offers wild offers that draw in crowds looking for a night of fun and excitement.</p>
         <button type="button" className="custom__button">Know More</button>
       </div>
     </div>
