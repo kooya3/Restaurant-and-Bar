@@ -2,57 +2,77 @@ import images from './images';
 
 const wines = [
   {
-    title: 'Chapel Hill Shiraz',
-    price: '$56',
-    tags: 'AU | Bottle',
+    title: '14 HANDS MOSCATO 750ML',
+    price: '1700sh',
+    tags: '10.5% | Bottle',
   },
   {
-    title: 'Catena Malbee',
-    price: '$59',
-    tags: 'AU | Bottle',
+    title: 'FRONTERA SAUVIGNON BLANC 1.5LTRS',
+    price: '1850sh',
+    tags: '12% | Bottle',
   },
   {
-    title: 'La Vieillw Rose',
-    price: '$44',
-    tags: 'FR | 750 ml',
+    title: 'NEDERBURG CABERNET SAUVIGNON DRY RED 750ML',
+    price: '1600sh',
+    tags: '14.5% | 750 ml',
   },
   {
-    title: 'Rhino Pale Ale',
-    price: '$31',
-    tags: 'CA | 750 ml',
+    title: 'ASCONI PASTROL 750ML',
+    price: '1600sh',
+    tags: '16% | 750 ml',
   },
   {
-    title: 'Irish Guinness',
-    price: '$26',
-    tags: 'IE | 750 ml',
+    title: 'PILSNER CAN 500ML',
+    price: '200sh',
+    tags: '4.5% | 750 ml',
+  },
+  {
+    title: 'TUSKER CAN 500ML',
+    price: '220sh',
+    tags: '4.2% | 750 ml',
+  },
+  {
+    title: 'TUSKER MALT CAN 500ML',
+    price: '250sh',
+    tags: '5% | 750 ml',
   },
 ];
 
 const cocktails = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    title: 'Long Island',
+    price: '800sh',
+    tags: 'Tequila | Simple syrup | Vodka | Gin | Rum | Triple sec | Lime | coke 30 ml',
   },
   {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    title: "Whiskey Sour",
+    price: '600sh',
+    tags: 'Whiskey | Lemon | lime | Sugar Syrup | Eggwhite (optional)',
   },
   {
-    title: 'Daiquiri',
-    price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    title: 'Tequila Sunrise',
+    price: '700sh',
+    tags: 'Blanco Tequila | Orange juice | Grenadine Syrup',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    title: 'Penicillin',
+    price: '650sh',
+    tags: 'Whiskey | Lemon | Honey Syrup | Ginger Syrup | shaken',
   },
   {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Mojito',
+    price: '700sh',
+    tags: 'Rum | Fresh Mints | Limes | Lime Juice | Simple Syrup | Soda Water',
+  },
+  {
+    title: 'Honolulu Punch',
+    price: '600sh',
+    tags: 'Gin | Dash of grenadine | Pineapple Juice | Orange Juice | Lemon Juice',
+  },
+  {
+    title: 'Gin Smash',
+    price: '600sh',
+    tags: 'London Dry Gin | Basil | Pineapple Juice | Shaken | Strained in a whiskey glass',
   },
 ];
 
