@@ -20,3 +20,7 @@
         min-width: 390px;
     }
 }
+.app__laurels_awards-card img {
+    width: 50px;
+    height: 50px;
+}
