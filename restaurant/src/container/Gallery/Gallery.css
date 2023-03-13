@@ -32,3 +32,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;  
 }
+.app__gallery-images_container::-webkit-scrollbar {
+    display: none;
+}
