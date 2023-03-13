@@ -60,3 +60,6 @@
 .app__gallery-images_card:hover img {
     opacity: .35;
 }
+.app__gallery-images_card:hover .gallery__image-icon {
+    opacity: 1;
+}
