@@ -6,3 +6,12 @@
 
     margin-top: 3rem;
 }
+.app__laurels_awards-card {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 230px;
+
+    margin: 1rem;
+}
