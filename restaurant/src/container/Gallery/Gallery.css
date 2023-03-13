@@ -14,3 +14,6 @@
     min-width: 500px;
     padding-right: 2rem;
 }
+.app__gallery-content button {
+    margin-top: 1rem;
+}
