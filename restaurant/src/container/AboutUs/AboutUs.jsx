@@ -24,7 +24,7 @@ const AboutUs = () => (
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">Our History</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
-        <p className="p__opensans">AM | PM is a restaurant and bar in Northern Bypass, Thome, after Windsor that was founded in 2020 by two ambitious men. The establishment offers delicious food, refreshing drinks, and a lively atmosphere, making it a hit with locals and visitors alike. Known for its focus on quality ingredients and expert preparation, AM | PM has become a fixture in the community, offering a unique dining and drinking experience. On Fridays and Saturdays, the establishment offers wild offers that draw in crowds looking for a night of fun and excitement.</p>
+        <p className="p__opensans">AM | PM is a restaurant and bar that was founded in 2020 by two ambitious men. The establishment offers delicious food, refreshing drinks, and a lively atmosphere, making it a hit with locals and visitors alike. Known for its focus on quality ingredients and expert preparation, AM | PM has become a fixture in the community, offering a unique dining and drinking experience. On Fridays and Saturdays, the establishment offers wild offers that draw in crowds looking for a night of fun and excitement.</p>
         <button type="button" className="custom__button">Know More</button>
       </div>
     </div>
