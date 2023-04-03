@@ -17,9 +17,8 @@ const Footer = () => {
         <div className="app__footer-links_contact">
           <h1 className="app__footer-headtext">Contact Us</h1>
           <p className="p__opensans"><FiMapPin />&nbsp;Northern Bypass, Thome, After Windsor</p>
-          <p className="p__opensans">+254 212-344-1230</p>
-          <p className="p__opensans">+254 212-555-1230</p>
-        </div>
+          <p className="p__opensans">+254 700-116-190</p>
+      </div>
 
         <div className="app__footer-links_logo">
           <img src={images.gericht} alt="footer_logo" />
