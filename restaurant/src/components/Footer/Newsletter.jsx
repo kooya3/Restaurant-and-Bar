@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 import SubHeading from '../SubHeading/SubHeading';
@@ -9,10 +8,27 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
   const formRef = useRef();
 
+  const [loading, setLoading] = useState(false);
+  
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setEmail({
+      ...email,
+      [name]: value,
+    });
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs.sendForm('service_ekhvjlh', 'template_1kql7og', formRef.current, 'ngs9p7jI_0GhMhbS9')
+    emailjs.send('service_ekhvjlh', 'template_1kql7og',{
+      from_email: email,
+      to_email: "elyeestatua@gmail.com",
+    }, 'ngs9p7jI_0GhMhbS9')
       .then((result) => {
         console.log(result.text);
         alert('Thank you for subscribing!');

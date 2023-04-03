@@ -79,23 +79,23 @@ const cocktails = [
 const awards = [
   {
     imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Our Choma',
+    subtitle: 'Well-Seasoned Choma In Northern Bypass, Nairobi Area.',
   },
   {
     imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Ample Parking',
+    subtitle: 'Adequate Parking Space Available For Our Customers.',
   },
   {
     imgUrl: images.award05,
     title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    subtitle: 'Quality Customer Service And Great Security.',
   },
   {
     imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Reasonable Prices',
+    subtitle: 'Have An Amazing Time Without Digging Too Deep.',
   },
 ];
 

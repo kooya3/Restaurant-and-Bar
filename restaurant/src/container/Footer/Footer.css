@@ -103,3 +103,23 @@
         width: 80%;
     }
 }
+.app__footer-links_legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #181818;
+    margin-top: 20px;
+  }
+  
+  .app__footer-links_legal a {
+    color: #100f0f;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .app__footer-links_legal a:hover {
+    text-decoration: underline;
+  }
+  

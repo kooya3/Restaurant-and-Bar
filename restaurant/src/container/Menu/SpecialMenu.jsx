@@ -35,9 +35,15 @@ const SpecialMenu = () => (
       </div>
     </div>
 
-    <div style={{ marginTop: 15 }}>
+{/*     <div style={{ marginTop: 15 }}>
       <button type="button" className="custom__button">View More</button>
-    </div>
+    </div> */}
+    <div className="app__specialMenu-menu_img">
+        <img src={images.qr} alt="menu__img" />
+      </div>
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Scan this code for menu</p>
+        </div>
   </div>
 );
 
