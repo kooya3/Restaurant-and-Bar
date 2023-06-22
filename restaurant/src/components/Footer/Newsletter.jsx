@@ -8,16 +8,6 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
   const formRef = useRef();
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setEmail({
-      ...email,
-      [name]: value,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
