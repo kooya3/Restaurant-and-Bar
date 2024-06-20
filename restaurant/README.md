@@ -4,7 +4,7 @@
 
 ## Available Scripts
 
-project directory, you can run:
+
 
 ### `npm start`
 
