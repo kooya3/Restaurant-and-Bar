@@ -7,7 +7,6 @@
  
 
 
-  in the console.
 
 ### `npm test`
 
