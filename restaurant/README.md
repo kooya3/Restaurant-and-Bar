@@ -7,7 +7,7 @@
  
 
 
- any lint errors in the console.
+  in the console.
 
 ### `npm test`
 
