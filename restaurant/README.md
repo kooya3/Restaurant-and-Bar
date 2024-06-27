@@ -1,8 +1,7 @@
 # Getting Started with Create React App
 
 
-
- about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
