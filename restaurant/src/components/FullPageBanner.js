@@ -4,39 +4,44 @@ import './FullPageBanner.css';
 
 const FullPageBanner = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 15,
-    hours: 23,
-    minutes: 53,
-    seconds: 7,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
+    // Disable refresh and reload
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Get or set the end time in localStorage
+    let endTime = localStorage.getItem('countdownEndTime');
+    if (!endTime) {
+      const now = new Date();
+      endTime = now.setDate(now.getDate() + 14); // 14 days from now
+      localStorage.setItem('countdownEndTime', endTime);
+    }
+
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        const newTime = { ...prevTime };
-        if (newTime.seconds > 0) {
-          newTime.seconds--;
-        } else {
-          newTime.seconds = 59;
-          if (newTime.minutes > 0) {
-            newTime.minutes--;
-          } else {
-            newTime.minutes = 59;
-            if (newTime.hours > 0) {
-              newTime.hours--;
-            } else {
-              newTime.hours = 23;
-              if (newTime.days > 0) {
-                newTime.days--;
-              } else {
-                clearInterval(timer);
-                // Redirect handled in handleButtonClick
-              }
-            }
-          }
-        }
-        return newTime;
-      });
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        localStorage.removeItem('countdownEndTime');
+        window.location.href = 'https://ampm.onrender.com/';
+      } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      }
     }, 1000);
 
     // Disable scrolling
@@ -44,12 +49,13 @@ const FullPageBanner = () => {
 
     return () => {
       clearInterval(timer);
-      // Re-enable scrolling when component unmounts
+      window.removeEventListener('beforeunload', handleBeforeUnload);
       document.body.style.overflow = 'auto';
     };
   }, []);
 
   const handleButtonClick = () => {
+    localStorage.removeItem('countdownEndTime');
     window.location.href = 'https://ampm.onrender.com/';
   };
 
