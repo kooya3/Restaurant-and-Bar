@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FiFacebook, FiTwitter, FiInstagram, FiMapPin } from 'react-icons/fi';
 
-import { FooterOverlay, Newsletter, Modal } from '../../components';
+import { FooterOverlay, Newsletter } from '../../components';
 import { images } from '../../constants';
 import './Footer.css';
 
 const Footer = () => {
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="app__footer section__padding" id="login">
@@ -42,18 +41,9 @@ const Footer = () => {
 
 
       <div className="footer__copyright">
-        <p className="p__opensans">AM-PM&nbsp;@2023  All Rights reserved.</p>
+        <p className="p__opensans">AM-PM&nbsp;@2024  All Rights reserved.</p>
       </div>
       
-      <div className="app">
-        <div className="app__footer-links">
-          <button className="app__footer-links_legal a" onClick={() => setShowModal(true)}>
-            &nbsp;Copyright&nbsp;&amp;&nbsp;Disclaimer
-          </button>
-        </div>
-
-      {showModal && <Modal setShowModal={setShowModal} />}
-    </div>
 
     </div>
   );

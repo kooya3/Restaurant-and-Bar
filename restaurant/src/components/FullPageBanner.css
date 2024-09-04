@@ -1,0 +1,139 @@
+.full-page-banner {
+  background-color: #000000;
+  color: #FFD700;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.content {
+  z-index: 1;
+  padding: 20px;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.countdown-item {
+  margin: 0 15px;
+}
+
+.countdown-value-container {
+  perspective: 1000px;
+}
+
+.countdown-value {
+  background-color: #FFD700;
+  color: #000000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.countdown-unit {
+  font-size: 0.9rem;
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #000000;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FFA500;
+}
+
+.specks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.speck {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #FFD700;
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .countdown-value {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .countdown-unit {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cta-button {
+  animation: pulse 2s infinite;
+}
