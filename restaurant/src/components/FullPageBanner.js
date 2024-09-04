@@ -163,7 +163,7 @@ const FullPageBanner = () => {
             </div>
           ))}
         </motion.div>
-        <motion.button
+{/*         <motion.button
           onClick={handleButtonClick}
           className="cta-button"
           whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(255,255,0)" }}
@@ -173,7 +173,7 @@ const FullPageBanner = () => {
           transition={{ duration: 0.5, delay: 2.7 }}
         >
           Can't Wait! Take Me to the Site
-        </motion.button>
+        </motion.button> */}
       </motion.div>
       <div className="specks-container">
         {[...Array(50)].map((_, i) => (
