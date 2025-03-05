@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import './FullPageBanner.css';
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import "./FullPageBanner.css"
 
 const FullPageBanner = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -8,56 +10,69 @@ const FullPageBanner = () => {
     hours: 0,
     minutes: 0,
     seconds: 0,
-  });
+  })
 
   useEffect(() => {
     // Disable refresh and reload
     const handleBeforeUnload = (e) => {
-      e.preventDefault();
-      e.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
+      e.preventDefault()
+      e.returnValue = ""
+    }
+    window.addEventListener("beforeunload", handleBeforeUnload)
 
     // Get or set the end time in localStorage
-    let endTime = localStorage.getItem('countdownEndTime');
-    if (!endTime) {
-      const now = new Date();
-      endTime = now.setDate(now.getDate() + 14); // 14 days from now
-      localStorage.setItem('countdownEndTime', endTime);
+    const endTimeStr = localStorage.getItem("countdownEndTime")
+    let endTime
+
+    if (!endTimeStr) {
+      // If no end time exists, create a new one 45 days from now
+      const now = new Date()
+      endTime = now.getTime() + 45 * 24 * 60 * 60 * 1000 // 45 days in milliseconds
+      localStorage.setItem("countdownEndTime", endTime.toString())
+    } else {
+      // Parse the stored end time as a number
+      endTime = Number.parseInt(endTimeStr, 10)
+
+      // Validate the end time - if it's invalid or in the past, set a new one
+      const now = new Date().getTime()
+      if (isNaN(endTime) || endTime <= now) {
+        endTime = now + 45 * 24 * 60 * 60 * 1000 // 45 days in milliseconds
+        localStorage.setItem("countdownEndTime", endTime.toString())
+      }
     }
 
     const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endTime - now;
+      const now = new Date().getTime()
+      const distance = endTime - now
 
       if (distance < 0) {
-        clearInterval(timer);
-        localStorage.removeItem('countdownEndTime');
-        window.location.href = 'https://ampm.onrender.com/';
+        clearInterval(timer)
+        localStorage.removeItem("countdownEndTime")
+        window.location.href = "https://ampm.co.ke/"
       } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
-        setTimeLeft({ days, hours, minutes, seconds });
+        setTimeLeft({ days, hours, minutes, seconds })
       }
-    }, 1000);
+    }, 1000)
 
     // Disable scrolling
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden"
 
     return () => {
-      clearInterval(timer);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
+      clearInterval(timer)
+      window.removeEventListener("beforeunload", handleBeforeUnload)
+      document.body.style.overflow = "auto"
+    }
+  }, [])
 
   const handleButtonClick = () => {
-    localStorage.removeItem('countdownEndTime');
-    window.location.href = 'https://ampm.onrender.com/';
-  };
+    localStorage.removeItem("countdownEndTime")
+    window.location.href = "https://ampm.co.ke/"
+  }
 
   const flipVariants = {
     enter: {
@@ -72,17 +87,17 @@ const FullPageBanner = () => {
       rotateX: 90,
       opacity: 0,
     },
-  };
+  }
 
   return (
-    <motion.div 
+    <motion.div
       className="full-page-banner"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <motion.div 
+      <motion.div
         className="content"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -106,6 +121,7 @@ const FullPageBanner = () => {
           />
         </motion.div>
         <motion.h1
+          className="text-4xl md:text-5xl font-extrabold mb-5 bg-clip-text text-transparent bg-gradient-to-br from-yellow-300 to-yellow-600"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.7 }}
@@ -133,7 +149,7 @@ const FullPageBanner = () => {
         >
           +254 700-116-190
         </motion.p>
-        <motion.div 
+        <motion.div
           className="countdown"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -152,7 +168,7 @@ const FullPageBanner = () => {
                     exit="exit"
                     transition={{
                       rotateX: { type: "spring", stiffness: 200, damping: 30 },
-                      opacity: { duration: 0.2 }
+                      opacity: { duration: 0.2 },
                     }}
                   >
                     {value}
@@ -190,14 +206,14 @@ const FullPageBanner = () => {
             }}
             transition={{
               duration: Math.random() * 3.33 + 3.33,
-              repeat: Infinity,
+              repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
           />
         ))}
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default FullPageBanner;
+export default FullPageBanner
